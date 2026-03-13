@@ -302,6 +302,50 @@
   .penthouse-card { background: linear-gradient(135deg, #162030 0%, #1a1e28 100%); }
   .penthouse-card .unit-type em { color: #E8D5A3; }
 
+
+  /* ── FEATURES ── */
+  .features-section { background: var(--mid); }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+  }
+  .feature-card {
+    background: var(--panel);
+    padding: 44px 36px;
+    position: relative; overflow: hidden;
+    transition: transform 0.4s;
+  }
+  .feature-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    transform: scaleX(0); transition: transform 0.4s;
+  }
+  .feature-card:hover { transform: translateY(-4px); }
+  .feature-card:hover::after { transform: scaleX(1); }
+  .feature-icon-wrap {
+    width: 56px; height: 56px;
+    border: 1px solid rgba(201,168,76,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; margin-bottom: 24px;
+    position: relative;
+  }
+  .feature-icon-wrap::before {
+    content: '';
+    position: absolute; inset: 4px;
+    border: 1px solid rgba(201,168,76,0.1);
+  }
+  .feature-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 400; color: var(--white);
+    margin-bottom: 10px; line-height: 1.2;
+  }
+  .feature-card-desc {
+    font-size: 13px; color: var(--muted); line-height: 1.8;
+  }
+
   /* ── WHY JAHI ── */
   .why-section { background: var(--deep); }
   .why-grid {
@@ -657,6 +701,51 @@
   </div>
 </section>
 
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">Why CEJULI</div>
+      <h2 class="section-title">Built-In <em>Features</em></h2>
+      <p class="section-desc">Every detail at CEJULI has been considered. These are not optional extras — they come standard with every unit.</p>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🛗</div>
+        <div class="feature-card-title">Elevator</div>
+        <div class="feature-card-desc">Private lift access built into the development — effortless movement between floors for residents and guests.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">☀️</div>
+        <div class="feature-card-title">Solar Pre-Installed</div>
+        <div class="feature-card-desc">Solar energy infrastructure is pre-installed across the building — reducing your electricity costs from day one.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">⚡</div>
+        <div class="feature-card-title">EV Charging Station</div>
+        <div class="feature-card-desc">Dedicated electric vehicle charging points built into the car park — future-ready for the cars of tomorrow.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🏠</div>
+        <div class="feature-card-title">Fully Smart & Automated</div>
+        <div class="feature-card-desc">Smart home automation throughout — control lighting, climate, security, and access from your phone.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🔥</div>
+        <div class="feature-card-title">Central Gas Reticulation</div>
+        <div class="feature-card-desc">Centralised gas supply piped directly to each unit — no cylinders, no interruptions, just seamless cooking and heating.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- WHY JAHI -->
 <section class="why-section" id="location">
   <div class="section-inner">
@@ -794,7 +883,7 @@
     <div class="section-header">
       <div class="section-eyebrow">Get In Touch</div>
       <h2 class="section-title">Secure Your <em>Unit Today</em></h2>
-      <p class="section-desc">With only 7 units available, CEJULI will sell fast. Contact our sales team to arrange a site visit or request a detailed brochure.</p>
+      <p class="section-desc">With only 5 units available, CEJULI will sell fast. Contact our sales team to arrange a site visit or request a detailed brochure.</p>
     </div>
 
     <div class="cta-band">
