@@ -485,14 +485,15 @@
     background: linear-gradient(to bottom, rgba(7,12,16,0.9), transparent);
     backdrop-filter: blur(8px);
   }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px; font-weight: 300; color: var(--white); letter-spacing: 3px;
-    text-transform: uppercase;
+  .nav-logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+    object-fit: contain;
   }
-  .nav-logo span { color: var(--gold); }
   .nav-brand {
     font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted);
+    margin-top: 4px;
   }
   .nav-right { text-align: right; }
   .nav-contact {
@@ -506,7 +507,9 @@
 <!-- NAV -->
 <nav>
   <div>
-    <div class="nav-logo"><span>CEJ</span>ULI</div>
+    <div class="nav-logo">
+      <img src="https://res.cloudinary.com/dvqgqgo4c/image/upload/v1773426595/CEJULI_Logo_dlxkl1.png" alt="CEJULI by Jucel Group"/>
+    </div>
     <div class="nav-brand">Premium Residences · Jahi, Abuja</div>
   </div>
   <div class="nav-right">
@@ -524,10 +527,9 @@
 
   <div class="hero-content">
     <div class="tag-line">Jucel Group · New Development</div>
-    <h1 class="hero-title">
-      CEJULI
-      <em>Residences</em>
-    </h1>
+    <div style="opacity:0; animation: fadeUp 1s 0.5s forwards; margin-bottom: 8px;">
+      <img src="https://res.cloudinary.com/dvqgqgo4c/image/upload/v1773426595/CEJULI_Logo_dlxkl1.png" alt="CEJULI by Jucel Group" style="height: 110px; width: auto; max-width: 420px; object-fit: contain; filter: brightness(1.1);"/>
+    </div>
     <p class="hero-sub">Premium Living · Jahi, Abuja</p>
     <p class="hero-location">Where Prestige Meets Possibility</p>
     <div class="hero-cta">
